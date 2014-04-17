@@ -671,8 +671,9 @@
     <module>integration</module>
     <module>examples</module>
     <module>distribution</module>
-    <module>math-scala</module>
+    <!--<module>math-scala</module>
     <module>spark</module>
+    -->
   </modules>
   <profiles>
     <profile>
