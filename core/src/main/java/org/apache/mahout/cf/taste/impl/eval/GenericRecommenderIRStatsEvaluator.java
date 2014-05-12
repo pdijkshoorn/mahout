@@ -239,6 +239,8 @@ public IRStatistics evaluate(RecommenderBuilder recommenderBuilder,
 		DataModelBuilder dataModelBuilder, DataModel dataModel,
 		IDRescorer rescorer, int at, double relevanceThreshold,
 		FastIDSet evaluationUsers) throws TasteException {
+	
+	log.info("-------- Inside the modified evaluator\n");
 
     Preconditions.checkArgument(recommenderBuilder != null, "recommenderBuilder is null");
     Preconditions.checkArgument(dataModel != null, "dataModel is null");
