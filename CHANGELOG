@@ -2,6 +2,46 @@ Mahout Change Log
 
 Release 1.0 - unreleased
 
+  MAHOUT-1532: Add solve() function to the Scala DSL (ssc)
+
+  MAHOUT-1548: Fix broken links in quickstart webpage (Andrew Palumbo via ssc)
+
+  MAHOUT-1428: Recommending already consumed items (Dodi Hakim via ssc)
+
+  MAHOUT-1533: Remove Frequent Pattern Mining (ssc)
+
+  MAHOUT-1526: Ant file in examples (ssc)
+
+  MAHOUT-1530: Custom prompt and welcome message for the Spark Shell (ssc)
+
+  MAHOUT-1521: lucene2seq - Error trying to load data from stored field (when non-indexed) (Terry Blankers via frankscholten)
+
+  MAHOUT-1310: Mahout support windows (Sergey Svinarchuk via ssc)
+
+  MAHOUT-1520: Fix links in Mahout website documentation (Saleem Ansari via smarthi)
+
+  MAHOUT-1523: Remove @author tags in sparkbindings (ssc)
+
+  MAHOUT-1510: Goodbye MapReduce (ssc)
+
+  MAHOUT-1519: Remove StandardThetaTrainer (Andrew Palumbo via ssc)
+
+  MAHOUT-1496: Create a website describing the distributed ALS recommender (Jian Wang via ssc)
+
+  MAHOUT-1502: Update Naive Bayes Webpage to Current Implementation (Andrew Palumbo via ssc)
+
+  MAHOUT-1517: Remove casts to int in ALSWRFactorizer (ssc)
+  
+  MAHOUT-1425: SGD classifier example with bank marketing dataset. (frankscholten)
+
+  MAHOUT-1511: Renaming core to mrlegacy (frankscholten)
+
+  MAHOUT-1497: mahout resplit not producing splited files (ssc)
+
+  MAHOUT-1513: Deprecate Canopy Clustering (ssc)
+
+  MAHOUT-1440: Add option to set the RNG seed for inital cluster generation in Kmeans/fKmeans (Andrew Palumbo via ssc)
+
   MAHOUT-1445: Create an intro for item based recommender (Nick Martin via ssc)
 
   MAHOUT-1509: Invalid URL in link from "quick start/basics" page (Nick Martin, smarthi)
@@ -29,6 +69,8 @@ Release 1.0 - unreleased
   MAHOUT-1472: Cleanup website on fuzzy kmeans (smarthi)
 
   MAHOUT-1471: Cleanup website for Canopy clustering (smarthi)
+
+  MAHOUT-1468: Creating a new page for StreamingKMeans documentation on mahout website (Maxim Arap and Pavan Kumar via akm)
 
   MAHOUT-1467: ClusterClassifier readPolicy leaks file handles (Avi Shinnar, smarthi)
 
@@ -83,6 +125,8 @@ Release 1.0 - unreleased
   MAHOUT-1329: Mahout for hadoop 2 (gcapan, Sergey Svinarchuk)
 
 Release 0.9 - 2014-02-01
+
+  MAHOUT-1387: Create page for release notes (ssc)
 
   MAHOUT-1411: Random test failures from TDigestTest (smarthi)
 

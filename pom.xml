@@ -107,6 +107,9 @@
     <hadoop.1.version>1.2.1</hadoop.1.version>
     <lucene.version>4.6.1</lucene.version>
     <slf4j.version>1.7.5</slf4j.version>
+    <scala.major>2.10</scala.major>
+    <scala.version>2.10.3</scala.version>
+    <spark.version>0.9.1</spark.version>
   </properties>
   <issueManagement>
     <system>Jira</system>
@@ -134,14 +137,14 @@
       <!-- our modules -->
 
       <dependency>
-        <artifactId>mahout-core</artifactId>
+        <artifactId>mahout-mrlegacy</artifactId>
         <groupId>${project.groupId}</groupId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
         <version>${project.version}</version>
-        <artifactId>mahout-core</artifactId>
+        <artifactId>mahout-mrlegacy</artifactId>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
@@ -531,7 +534,7 @@
         <configuration>
           <forkCount>2</forkCount>
           <reuseForks>false</reuseForks>
-          <argLine>-Xmx512m -Djava.security.manager
+          <argLine>-Xmx512m -Djava.security.manager -Djava.library.path=${env.HADOOP_HOME}\bin
           -Djava.security.policy=${project.build.directory}/../../buildtools/src/test/resources/java.policy</argLine>
           <argLine>-Djava.security.auth.login.config=${project.build.directory}/../../buildtools/src/test/resources/jaas.config</argLine>
           <testFailureIgnore>false</testFailureIgnore>
@@ -667,14 +670,17 @@
   <modules>
     <module>buildtools</module>
     <module>math</module>
-    <module>core</module>
+    <module>mrlegacy</module>
     <module>integration</module>
     <module>examples</module>
     <module>distribution</module>
     <!--<module>math-scala</module>
     <module>spark</module>
+  <module>spark-shell</module>
+
     -->
-  </modules>
+
+ </modules>
   <profiles>
     <profile>
       <id>hadoop1</id>
