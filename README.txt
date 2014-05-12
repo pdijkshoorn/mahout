@@ -1,4 +1,4 @@
-Welcome to Apache Mahout!
+ghgWelcome to Apache Mahout!
 
 Getting Started
   See http://mahout.apache.org
