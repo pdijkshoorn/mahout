@@ -52,7 +52,7 @@ import com.google.common.base.Preconditions;
  * statistics based on a {@link DataModel} that does not have these values. This number {@code n} is the
  * "at" value, as in "precision at 5". For example, this would mean precision evaluated by removing the top 5
  * preferences for a user and then finding the percentage of those 5 items included in the top 5
- * recommendations for that user.
+ * recommendations for that user. 
  * </p>
  */
 public final class GenericRecommenderIRStatsEvaluator implements RecommenderIRStatsEvaluator {
@@ -276,7 +276,7 @@ public IRStatistics evaluate(RecommenderBuilder recommenderBuilder,
         continue;
       }
 
-      FastByIDMap<PreferenceArray> trainingUsers = new FastByIDMap<PreferenceArray>(dataModel.getNumUsers());
+      FastByIDMap<PreferenceArray> trainingUsers = new FastByIDMap<PreferenceArray>();
       LongPrimitiveIterator it2 = dataModel.getUserIDs();
       while (it2.hasNext()) {
         dataSplitter.processOtherUser(userID, relevantItemIDs, trainingUsers, it2.nextLong(), dataModel);
