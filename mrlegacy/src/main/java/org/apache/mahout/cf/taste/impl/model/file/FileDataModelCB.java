@@ -117,7 +117,7 @@ import com.google.common.io.Closeables;
  * application-specific needs and input formats. See {@link #processLine(String, FastByIDMap, FastByIDMap, boolean)} and
  * {@link #processLineWithoutID(String, FastByIDMap, FastByIDMap)}
  */
-public class FileDataModelCB extends AbstractDataModel {
+public class FileDataModelCB extends AbstractDataModel { 
 
   private static final Logger log =  LoggerFactory.getLogger(FileDataModelCB.class);
 
