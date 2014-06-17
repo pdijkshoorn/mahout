@@ -54,7 +54,7 @@ import com.google.common.io.Closeables;
  * <p>
  * A {@link DataModel} backed by a delimited file. This class expects a file where each line
  * contains a user ID, followed by item ID, followed by optional preference value, followed by
- * optional timestamp. Commas or tabs delimit fields:
+ * optional timestamp. Commas or tabs delimit fields: 
  * </p>
  *
  * <p>{@code userID,itemID[,preference[,timestamp]]}</p>
