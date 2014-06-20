@@ -20,6 +20,7 @@ package org.apache.mahout.sparkbindings.drm
 import scala.reflect.ClassTag
 import org.apache.spark.SparkContext
 import org.apache.spark.storage.StorageLevel
+import org.apache.mahout.sparkbindings._
 
 /** Encapsulates either DrmRdd[K] or BlockifiedDrmRdd[K] */
 class DrmRddInput[K: ClassTag](
@@ -30,6 +31,10 @@ class DrmRddInput[K: ClassTag](
   assert(rowWiseSrc.isDefined || blockifiedSrc.isDefined, "Undefined input")
 
   private lazy val backingRdd = rowWiseSrc.map(_._2).getOrElse(blockifiedSrc.get)
+
+  def isBlockified:Boolean = blockifiedSrc.isDefined
+
+  def isRowWise:Boolean = rowWiseSrc.isDefined
 
   def toDrmRdd(): DrmRdd[K] = rowWiseSrc.map(_._2).getOrElse(deblockify(rdd = blockifiedSrc.get))
 
